@@ -1,0 +1,13 @@
+// ────────────── Startup Applications ──────────────
+
+    // Запуск графической оболочки Noctalia
+    spawn-sh-at-startup "qs -c noctalia-shell"
+
+    // МЕНЕДЖЕР БУФЕРА ОБМЕНА (CLIPHIST)
+    // 1. Мониторинг и запись текста
+    spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+    // 2. Мониторинг и запись изображений
+    spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+
+    // Запуск прокси-сервера для Telegram (если не используется системный systemd-сервис)
+    // spawn-at-startup "tg-ws-proxy" "--port" "1443" "--secret" "dd72976cf457da0f011fc204cf6fda3d8c"

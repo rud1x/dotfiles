@@ -1,0 +1,22 @@
+    layout {
+        gaps 16 // Gap between windows
+        center-focused-column "never" // Don’t auto-center focused column
+
+        background-color "transparent" // <- needed for noctalia-shell to set wallpaper
+
+        // --- Настройки обводки окон ---
+        border {
+            width 3                           // толщина рамки в пикселях
+            active-color "#89b4fa"           // цвет активного окна (голубой)
+            inactive-color "#45475a"         // цвет неактивных окон (тёмно-серый)
+            // urgent-color "#f38ba8"        // цвет для окон, требующих внимания (красный)
+        }
+
+        preset-column-widths {
+            proportion 0.33333
+            proportion 0.5
+            proportion 0.66667
+        }
+
+        struts {}
+    }
